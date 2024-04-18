@@ -40,6 +40,24 @@ header {
     transition: all .6s;
 }
 
+header .icon-cart{
+    position: relative;
+}
+
+header .icon-cart span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
 .logo {
     font-size: 33px;
     font-weight: 800;
@@ -99,7 +117,7 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url(../img/bg.png);
+    background: url(../img/frontimg.jpg);
     background-size: cover;
     background-position:center center;
     display: flex;
@@ -230,15 +248,11 @@ section {
     margin-top: 5px;
 }
 
-.row-left a{
+.row-left button{
     font-size: var(--p-font);
     font-weight: 500;
     color: var(--second-color);
     transition: all .6s;
-}
-
-.row-left a:hover{
-    color: var(--text-color);
 }
 
 .row-left i {
@@ -275,48 +289,36 @@ section {
     transform: scale(0.9) translateY(-6px);
 }
 
-.feature {
-    padding: 10px 14% 10px;
-}
-
-.feature-content {
+.cartTab {
+    width: 400px;
+    background-color: var(--second-color);
+    color: var(--bg-color);
+    position: fixed;
+    inset: 0 0 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-rows: 70px 1fr 70px;
 }
 
-.box {
-    padding: 15px 15px 15px 30px;
-    border-left: 4px solid var(--second-color);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    transition: all 0.6s;
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
 }
 
-.f-icon i {
-    font-size: 33px;
+.cartTab .listKnop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.f-text h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.f-text p {
-    font-size: var(--p-font);
-    font-weight: 400;
-    color: var(--second-color);
-    line-height: 33px;
-}
-
-.box:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-left: 4px solid var(--text-color);
+.cartTab .listKnop button {
+    background-color: var(--other-color);
+    border: none;
+    font-weight: 500;
     cursor: pointer;
+}
+
+.cartTab .listKnop .close {
+    background-color: var(--bg-color);
 }
 
 .selling-content {
@@ -377,6 +379,50 @@ section {
     transform: rotate3d(0, 0, 1, 360deg) scale(1.03);
 }
 
+.feature {
+    padding: 10px 14% 10px;
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.box {
+    padding: 15px 15px 15px 30px;
+    border-left: 4px solid var(--second-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    transition: all 0.6s;
+}
+
+.f-icon i {
+    font-size: 33px;
+}
+
+.f-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.f-text p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: var(--second-color);
+    line-height: 33px;
+}
+
+.box:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-left: 4px solid var(--text-color);
+    cursor: pointer;
+}
+
 .newsletter-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -422,8 +468,9 @@ section {
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px, auto));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     gap: 2rem;
 }
 
@@ -460,10 +507,146 @@ section {
     font-size: 17px;
     border-radius: 10px;
     margin-right: 14px;
-    transform: transform 0.6s;
 }
 
 .social a:hover {
     transform: rotate3d(0, 0, 1, 360deg) scale(1.06);
     color: var(--bg-color);
 } 
+
+.copyright {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 14% 20px;
+}
+
+.end-text p {
+    font-size: 15px;
+}
+
+.end-img img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+@media(max-width: 1610px) {
+    header{
+        padding: 15px 7%;
+    }
+    section{
+        padding: 70px 7% 80px;
+    }
+    .brands{
+        padding: 20px 7%;
+    }
+    .feature{
+        padding: 10px 7% 10px;
+    }
+}
+
+@media(max-width: 1500px){
+    .home{
+        height: 90vh;
+    }
+    :root{
+        --h1-font: 4.8rem;
+        --h2-font: 2.8rem;
+        --p-font: 15px;
+    }
+}
+
+@media(max-width: 1170px){
+    header{
+        padding: 10px 4%;
+    }
+    section{
+        padding: 60px 4% 70px;
+    }
+    .brands{
+        padding: 30px 4%;
+    }
+    .feature{
+        padding: 10px 4% 10px;
+    }
+    .feature-content{
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    .newsletter-content{
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    .selling-content{
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+}
+
+@media(max-width: 1050px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all .50s ease;
+    }
+    .navlist a{
+        display: block;
+        color: #979797;
+        padding: 0;
+        margin: 0px 0px 30px 0px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .navlist.open{
+        left: 0;
+    }
+    :root{
+        --h1-font: 4.5rem;
+        --h2-font: 2.6rem;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .merken{
+        padding: 40px 4%;
+    }
+    .main-merken{
+        gap: 25px;
+    }
+    .brands-c img{
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+    .newsletter-content form input:first-child{
+        padding: 8px;
+    }
+    .newsletter-content form input:last-child{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 530px){
+    :root{
+        --h1-font: 3.5rem;
+        --h2-font: 2.2rem;
+    }
+    .knop{
+        padding: 12px 20px;
+    }
+    .nav-right a{
+        margin-right: 7px;
+    }
+}
