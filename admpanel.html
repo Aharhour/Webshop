@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="CSS/admpanel.css">
+</head>
+<body>
+    <h1>Admin panel</h1>
+
+    <form id="image-form">
+        <input type="text" id="image-name" placeholder="Image Name" required>
+        <input type="file" id="image-file" accept="image/*" required>
+        <input type="number" id="image-price" placeholder="Price in Euros" required>
+        <input type="number" id="image-quantity" placeholder="Quantity" required>
+        <button type="submit">Add Image</button>
+    </form>
+
+    <div id="image-list"></div>
+
+    <script src="JS/admpanel.js"></script>
+</body>
+</html>

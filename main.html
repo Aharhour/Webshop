@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xeno</title>
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/cart.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,28 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body>
-
-    <header>
-        <a href="#" class="logo">Xeno</a>
-
-        <ul class="navlist">
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">On sale</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Brands</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-        <div class="nav-right">
-            <a href="#"><i class="ri-search-line"></i></a>
-            <a href="#"><i class="ri-shopping-bag-line"></i></a>
-            <a href="#"><i class="ri-user-line"></i></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">Xeno</a>
+            <ul class="navlist">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">On sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+    </div>
     
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart"></div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+
     <section class="home">
         <div class="home-text" data-aos="fade-up">
             <h6>New Arrivals</h6>
@@ -46,7 +54,7 @@
             <a href="#" class="knop"> shop now <i class="ri-arrow-right-line"></i></a>
         </div>
     </section>
-
+    
     <div class="merken">
         <div class="main-merken" data-aos="zoom-in">
             <div class="merken-img">
@@ -71,282 +79,12 @@
         </div>
     </div>
 
-    <section class="producten">
+    <section class="producten" data-aos="fade-up">
         <div class="center-text">
             <h2>All Products</h2>
         </div>
 
-        <div class="n-content" data-aos="zoom-in">
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n1.png">
-                </div>
-                    <h3>T-SHIRT WITH TAPE DETAILS</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-half-fill"></i></a>
-                        <a>4.5/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€24.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n2.png">
-                </div>
-                    <h3>GIRLS HIGH RISE SKINNY JEAN</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a>4.0/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€49,99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n3.png">
-                </div>
-                    <h3>Checked Shirt with Spread Collar</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-half-fill"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a>3.5/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€34.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n4.png">
-                </div>
-                    <h3>DOLCE & GABBANA BLACK T-SHIRT</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-half-fill"></i></a>
-                        <a>4.5/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€174.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n5.png">
-                </div>
-                    <h3>Regular Fit Striped Collar Shirt</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a>3/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€54.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n6.png">
-                </div>
-                    <h3>LOW-WAIST BERMUDA SHORTS</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a>4.0/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€39.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n7.png">
-                </div>
-                    <h3>COURAGE® COTTON TEE</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-half-fill"></i></a>
-                        <a>4.5/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€74.99</h6>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="row-img">
-                    <img src="img/n8.png">
-                </div>
-                    <h3>BETTY & CO BASIC JEANS</h3>
-                    <div class="stars">
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-fill"></i></a>
-                        <a><i class="ri-star-line"></i></a>
-                        <a>4.0/5</a>
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <button class="addShoppingCart">
-                                Add to cart
-                                <i class="ri-shopping-cart-fill"></i>
-                            </button>
-                        </div>
-
-                        <div class="row-right">
-                            <h6>€69.99</h6>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <section class="selling">
-        <div class="center-text" data-aos="fade-up">
-            <h2>Best Seller's</h2>
-        </div>
-
-        <div class="selling-content" data-aos="zoom-in">
-            <div class="col">
-                <div class="col-img">
-                    <img src="img/n1.png">
-                </div>
-
-                <div class="col-icon">
-                    <a href="#"><i class="ri-heart-line"></i></a>
-                    <a href="#"><i class="ri-eye-line"></i></a>
-                    <a href="#"><i class="ri-shopping-cart-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="col-img">
-                    <img src="img/n8.png">
-                </div>
-
-                <div class="col-icon">
-                    <a href="#"><i class="ri-heart-line"></i></a>
-                    <a href="#"><i class="ri-eye-line"></i></a>
-                    <a href="#"><i class="ri-shopping-cart-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="col-img">
-                    <img src="img/n3.png">
-                </div>
-
-                <div class="col-icon">
-                    <a href="#"><i class="ri-heart-line"></i></a>
-                    <a href="#"><i class="ri-eye-line"></i></a>
-                    <a href="#"><i class="ri-shopping-cart-line"></i></a>
-                </div>
-            </div>
-        </div>
+        <div id="product-list"></div>
     </section>
 
     <section class="feature">
@@ -444,7 +182,6 @@
         </div>
     </div>
 
-    <script src="JS/shoppingcart.js"></script>
     <script src="JS/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

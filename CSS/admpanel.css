@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#image-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#image-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#image-form input[type="text"],
+#image-form input[type="number"],
+#image-form input[type="file"],
+#image-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#image-form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#image-form button:hover {
+    background-color: #45a049;
+}
+
+#image-list {
+    margin-top: 20px;
+}
+
+.image-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.image-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
