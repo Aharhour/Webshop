@@ -19,10 +19,9 @@ Xeno is an online clothing store where you can find an extensive range of appare
 
 ## How to Use
 
-1. **Browsing Clothing**: Simply navigate through the different categories or use the search bar to find specific items.
-2. **Adding to Cart**: Once you've found the clothing items you want to purchase, simply click on the "Add to Cart" button.
-3. **Safe Shopping Experience**: Shop with confidence knowing that your transactions are protected by our advanced security measures.
-4. **Admin Panel**: As an admin, log in to the admin panel to manage your products. Add new products, update product information, or remove items from your inventory.
+1. **Adding to Cart**: Once you've found the clothing items you want to purchase, simply click on the "Add to Cart" button.
+2. **Safe Shopping Experience**: Shop with confidence knowing that your transactions are protected by our advanced security measures.
+3. **Admin Panel**: As an admin, log in to the admin panel to manage your products. Add new products, update product information, or remove items from your inventory.
 
 ## Contributing
 
