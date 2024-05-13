@@ -83,4 +83,4 @@ Congratulations! You have successfully deployed your repository and created a si
 
 If you encounter any issues while using my website or have suggestions for improvement, feel free to reach out to me. I'am always looking for ways to enhance the user experience and appreciate any feedback.
 
-Thank you for choosing Xeno for all your online shopping needs!
+Thank you for choosing Xeno for all your online shopping needs!!
