@@ -4,6 +4,7 @@ const listProductHTML = document.getElementById("product-list");
 const listCartHTML = document.querySelector('.listCart');
 const cartCountSpan = document.querySelector('.cart-count');
 let products = [];
+let cart = [];
 
 imageForm.addEventListener("submit", function(e) {
     e.preventDefault();
