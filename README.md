@@ -23,7 +23,7 @@ Xeno is an online clothing store where you can find an extensive range of appare
 2. **Safe Shopping Experience**: Shop with confidence knowing that your transactions are protected by our advanced security measures.
 3. **Admin Panel**: As an admin, log in to the admin panel to manage your products. Add new products, update product information, or remove items from your inventory.
 
-4. # Deploying a Repository and Creating a Site with Netlify
+## Deploying a Repository and Creating a Site with Netlify
 
 Netlify is a popular platform for deploying websites and web applications. It offers seamless integration with Git repositories, making it easy to deploy your projects. Here's a step-by-step guide on how to deploy a repository and create a site with Netlify:
 
