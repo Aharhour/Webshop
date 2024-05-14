@@ -77,9 +77,10 @@ section {
     padding-top: 60px;
 }
 
-.home-text h1 {
+#ptext {
     font-size: var(--h1-font);
     font-weight: 700;
+    color: var(--text-color);
     line-height: 1.1;
     margin-bottom: 20px;
 }

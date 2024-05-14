@@ -5,6 +5,7 @@ const listCartHTML = document.querySelector('.listCart');
 const cartCountSpan = document.querySelector('.cart-count');
 let products = [];
 let cart = [];
+let productIdCounter = 0;
 
 imageForm.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -12,7 +13,6 @@ imageForm.addEventListener("submit", function(e) {
     const name = document.getElementById("image-name").value;
     const file = document.getElementById("image-file").files[0];
     const price = parseFloat(document.getElementById("image-price").value);
-    const quantity = parseInt(document.getElementById("image-quantity").value);
 
     const reader = new FileReader();
     reader.onload = function() {
@@ -21,8 +21,7 @@ imageForm.addEventListener("submit", function(e) {
             id: productId,
             name: name,
             image: reader.result,
-            price: price,
-            quantity: quantity
+            price: price
         };
 
         let images = JSON.parse(localStorage.getItem("images")) || [];
@@ -45,7 +44,6 @@ function renderImages(images) {
             <img src="${imageData.image}" alt="${imageData.name}">
             <span>Name: ${imageData.name}</span>
             <span>Price: €${imageData.price}</span>
-            <span>Quantity: ${imageData.quantity}</span>
             <button class="delete-button" data-index="${index}">Delete</button>
         `;
         imageList.appendChild(imageDiv);
@@ -75,7 +73,7 @@ function renderProducts(images) {
                 `<div class="product-image"><img src="${product.image}" alt=""></div>
                 <div class="product-details">
                     <h2>${product.name}</h2>
-                    <div class="price">€${product.price}</div>
+                    <div class="price">€${product.price.toFixed(2)}</div> <!-- Display price with 2 decimal places -->
                     <button class="addCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Add To Cart</button>
                 </div>`;
             listProductHTML.appendChild(newProduct);
@@ -89,7 +87,7 @@ function renderProducts(images) {
                     cart[existingItemIndex].quantity++;
                     cart[existingItemIndex].total = cart[existingItemIndex].price * cart[existingItemIndex].quantity;
                 } else {
-                    cart.push({ id: productId, name: productName, price: productPrice, quantity: 1, total: productPrice });
+                    cart.push({ id: productId, name: productName, price: productPrice, total: productPrice });
                 }
                 localStorage.setItem('cart', JSON.stringify(cart));
                 updateCartIcon();
@@ -106,7 +104,7 @@ function updateCartIcon() {
 }
 
 function generateProductId() {
-    return '_' + Math.random().toString(36).substr(2, 9);
+    return String(productIdCounter++).padStart(9, '0');
 }
 
 function getImageUrlById(productId) {

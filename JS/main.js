@@ -7,6 +7,7 @@ const closeCart = document.querySelector('.close');
 const checkoutButton = document.querySelector('.checkOut');
 let products = [];
 let cart = [];
+let productIdCounter = 0;
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -22,35 +23,30 @@ function displayImages() {
         products = [
             {
                 "name": "Orange T-shirt",
-                "quantity": 10,
                 "image": "img/n1.png",
                 "price": 25.99,
                 "id": 0
             },
             {
                 "name": "Denim Jeans",
-                "quantity": 5,
                 "image": "img/n2.png",
                 "price": 19.99,
                 "id": 1
             },
             {
                 "name": "Overhemd",
-                "quantity": 8,
                 "image": "img/n3.png",
                 "price": 29.99,
                 "id": 2
             },
             {
                 "name": "Zwarte T-shirt",
-                "quantity": 15,
                 "image": "img/n4.png",
                 "price": 14.99,
                 "id": 3
             },
             {
                 "name": "Green hemd",
-                "quantity": 3,
                 "image": "img/n5.png",
                 "price": 39.99,
                 "id": 4
@@ -194,3 +190,4 @@ checkoutButton.addEventListener('click', () => {
     addCartToHTML();
     alert("Dank u voor uw bestelling");
 });
+``
