@@ -35,7 +35,8 @@ Before you begin, make sure you have the following:
 - An account on Netlify. You can sign up for free at [Netlify](https://www.netlify.com/).
 
 ## How to go to my website
-- Go to the search bar and type in:
+- Go to the search bar and type in: https://main--xxeno.netlify.app/
+- Your at my website now!
 
 ## Steps
 
