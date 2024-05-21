@@ -44,6 +44,7 @@ function renderImages(images) {
             <img src="${imageData.image}" alt="${imageData.name}">
             <span>Name: ${imageData.name}</span>
             <span>Price: €${imageData.price}</span>
+            <button class="edit-button" data-index="${index}">Edit</button>
             <button class="delete-button" data-index="${index}">Delete</button>
         `;
         imageList.appendChild(imageDiv);
@@ -58,8 +59,27 @@ imageList.addEventListener("click", (e) => {
         localStorage.setItem("images", JSON.stringify(images));
         renderImages(images);
         renderProducts(images);
+    } else if (e.target.classList.contains("edit-button")) {
+        const index = e.target.getAttribute("data-index");
+        const images = JSON.parse(localStorage.getItem("images")) || [];
+        const imageData = images[index];
+        showEditForm(imageData, index);
     }
 });
+
+function showEditForm(imageData, index) {
+    const newName = prompt("Enter new name:", imageData.name);
+    const newPrice = parseFloat(prompt("Enter new price:", imageData.price));
+    if (newName !== null && !isNaN(newPrice)) {
+        imageData.name = newName;
+        imageData.price = newPrice;
+        const images = JSON.parse(localStorage.getItem("images")) || [];
+        images[index] = imageData;
+        localStorage.setItem("images", JSON.stringify(images));
+        renderImages(images);
+        renderProducts(images);
+    }
+}
 
 function renderProducts(images) {
     listProductHTML.innerHTML = "";
@@ -73,7 +93,7 @@ function renderProducts(images) {
                 `<div class="product-image"><img src="${product.image}" alt=""></div>
                 <div class="product-details">
                     <h2>${product.name}</h2>
-                    <div class="price">€${product.price.toFixed(2)}</div> <!-- Display price with 2 decimal places -->
+                    <div class="price">€${product.price.toFixed(2)}</div>
                     <button class="addCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Add To Cart</button>
                 </div>`;
             listProductHTML.appendChild(newProduct);

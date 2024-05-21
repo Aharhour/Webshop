@@ -34,6 +34,9 @@ Before you begin, make sure you have the following:
 - A Git repository containing your website or web application.
 - An account on Netlify. You can sign up for free at [Netlify](https://www.netlify.com/).
 
+## How to go to my website
+- Go to the search bar and type in:
+
 ## Steps
 
 ### 1. Log in to Netlify

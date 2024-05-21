@@ -4,7 +4,7 @@ const iconCart = document.querySelector('.icon-cart');
 const cartCountSpan = document.querySelector('.cart-count');
 const body = document.querySelector('body');
 const closeCart = document.querySelector('.close');
-const checkoutButton = document.querySelector('.checkOut');
+const checkoutButton = document.querySelector('.checkout'); // fixed selector
 let products = [];
 let cart = [];
 let productIdCounter = 0;
@@ -85,7 +85,7 @@ function displayImages() {
                 cart[existingItemIndex].quantity++;
                 cart[existingItemIndex].total = cart[existingItemIndex].price * cart[existingItemIndex].quantity;
             } else {
-                cart.push({ id: productId, name: productName, price: productPrice, quantity: 1, total: productPrice, image: productImage }); // Add image to cart item
+                cart.push({ id: productId, name: productName, price: productPrice, quantity: 1, total: productPrice, image: productImage });
             }
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartIcon();
@@ -100,7 +100,7 @@ function displayImages() {
     });
 }
 
-displayImages(); 
+displayImages();
 
 const addDataToHTML = () => {
     products = JSON.parse(localStorage.getItem("images")) || [];
@@ -182,12 +182,3 @@ function getImageUrlById(productId) {
 }
 
 updateCartIcon();
-
-checkoutButton.addEventListener('click', () => {
-    cart = [];
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartIcon();
-    addCartToHTML();
-    alert("Dank u voor uw bestelling");
-});
-``
